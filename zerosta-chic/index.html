@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zerosta Chic | 美容室サンプル</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+  <meta name="theme-color" content="#C49A9A" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="#top" class="logo">Zerosta</a></div>
+      <nav class="nav">
+        <a href="#concept">Concept</a>
+        <a href="#menu">Menu</a>
+        <a href="#stylists">Stylists</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Voice</a>
+        <a href="#access">Access</a>
+        <a href="#contact" class="btn btn-small">予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 1. ヒーロー -->
+    <section class="hero">
+      <img src="assets/img/hero.jpg" alt="Zerosta Chic メインビジュアル" class="hero-img" loading="eager" decoding="async">
+      <div class="hero-text">
+        <h1 class="serif">Zerosta Chic</h1>
+        <p class="tagline">髪も心も、もっと自由に — 洗練を日常へ。</p>
+        <p><a href="#contact" class="btn btn-primary">予約する</a></p>
+      </div>
+    </section>
+
+    <!-- 2. Concept -->
+    <section id="concept" class="section">
+      <div class="container">
+        <h2 class="section-title serif">Concept</h2>
+        <p class="section-lead">
+          一人ひとりの骨格・肌色・ライフスタイルに合わせて、過度な装飾に頼らない上質なスタイルをご提案します。
+          都会的でミニマル。けれど、あなたらしさは艶やかに。
+        </p>
+
+        <div class="feature-grid">
+          <article class="card">
+            <img src="assets/img/service-cut.jpg" alt="カット施術" loading="lazy">
+            <h3>Cut</h3>
+            <p>骨格を計算したシルエットで、乾かすだけで決まる。</p>
+          </article>
+          <article class="card">
+            <img src="assets/img/service-color.jpg" alt="カラーリング施術" loading="lazy">
+            <h3>Color</h3>
+            <p>肌映えを科学した透明感カラーで、上品なツヤを。</p>
+          </article>
+          <article class="card">
+            <img src="assets/img/service-treatment.jpg" alt="トリートメント施術" loading="lazy">
+            <h3>Care & Treatment</h3>
+            <p>芯から整えるケアで、手触りまで美しく。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Menu & Price -->
+    <section id="menu" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title serif">Menu & Price</h2>
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>Cut</h3>
+            <ul>
+              <li><span>カット & ブロー</span><strong>¥5,500</strong></li>
+              <li><span>前髪カット</span><strong>¥1,100</strong></li>
+            </ul>
+            <p class="note">所要時間 45–60分</p>
+          </div>
+          <div class="price-card">
+            <h3>Color</h3>
+            <ul>
+              <li><span>リタッチカラー</span><strong>¥6,600</strong></li>
+              <li><span>フルカラー</span><strong>¥7,700〜</strong></li>
+            </ul>
+            <p class="note">所要時間 60–90分</p>
+          </div>
+          <div class="price-card">
+            <h3>Perm / Care</h3>
+            <ul>
+              <li><span>パーマ</span><strong>¥8,800〜</strong></li>
+              <li><span>トリートメント</span><strong>¥3,300〜</strong></li>
+            </ul>
+            <p class="note">ブリーチ・ダブルカラー要相談</p>
+          </div>
+        </div>
+        <div class="cta-line">
+          <p class="muted">初回限定：カット＋カラー 10%OFF（平日限定）</p>
+          <a href="#contact" class="btn btn-outline">空き状況を確認</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Stylists -->
+    <section id="stylists" class="section">
+      <div class="container">
+        <h2 class="section-title serif">Stylists</h2>
+        <div class="stylist-grid">
+          <article class="stylist stylist--team">
+            <img src="assets/img/staff-group.jpg" alt="スタイリスト集合写真" loading="lazy">
+            <div>
+              <h3>Zerosta Team</h3>
+              <p class="muted">上品で再現性の高いデザインをご提案します。</p>
+              <p>ショート・ボブ、透明感カラー、ケアまで幅広く対応。担当指名も承ります。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.5 NEWS（横スライド） -->
+    <section id="news" class="section">
+      <div class="container">
+        <h2 class="section-title serif">Latest News</h2>
+
+        <div class="zc-slider">
+          <div class="zc-scroller" id="news-scroller" aria-label="最新ニュースの横スクロール">
+            <!-- カード1 -->
+            <article class="zc-tile">
+              <div class="zc-media"><img src="assets/img/news-01.jpg" alt="春のトレンドカラー解禁"></div>
+              <div class="zc-body">
+                <div class="zc-kv">春のトレンドカラー解禁</div>
+                <p>軽やかなベージュ×ローズの組み合わせをご紹介。肌なじみと透明感がポイント。</p>
+                <small class="zc-meta">2025.03.01｜お知らせ</small>
+              </div>
+            </article>
+            <!-- カード2 -->
+            <article class="zc-tile">
+              <div class="zc-media"><img src="assets/img/news-02.jpg" alt="新スタイリスト加入のお知らせ"></div>
+              <div class="zc-body">
+                <div class="zc-kv">新スタイリスト加入のお知らせ</div>
+                <p>ショート×パーマが得意なAyakaがチームに。指名予約も受付開始。</p>
+                <small class="zc-meta">2025.02.20｜ニュース</small>
+              </div>
+            </article>
+            <!-- カード3 -->
+            <article class="zc-tile">
+              <div class="zc-media"><img src="assets/img/news-03.jpg" alt="ヘアケア講座：乾かし方の基本"></div>
+              <div class="zc-body">
+                <div class="zc-kv">ヘアケア講座：乾かし方の基本</div>
+                <p>ドライ方向と温冷の切替で翌朝のまとまりが変わる。動画で解説予定。</p>
+                <small class="zc-meta">2025.02.05｜コラム</small>
+              </div>
+            </article>
+          </div>
+
+          <div class="zc-nav">
+            <button class="zc-btn prev" data-target="#news-scroller" aria-label="前へ">‹</button>
+            <button class="zc-btn next" data-target="#news-scroller" aria-label="次へ">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.6 Trends（画像サイズ統一） -->
+    <section id="trends" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title serif">Trend Hair Collection</h2>
+        <p class="section-lead">今季の推しスタイルをピックアップ。</p>
+
+        <div class="zc-grid" data-ratio="4/5">
+          <figure class="zc-item">
+            <div class="zc-thumb"><img src="assets/img/trend-01.jpg" alt="Airy Bob"></div>
+            <figcaption class="zc-cap">Airy Bob</figcaption>
+          </figure>
+          <figure class="zc-item">
+            <div class="zc-thumb"><img src="assets/img/trend-02.jpg" alt="Warm Beige"></div>
+            <figcaption class="zc-cap">Warm Beige</figcaption>
+          </figure>
+          <figure class="zc-item">
+            <div class="zc-thumb"><img src="assets/img/trend-03.jpg" alt="Glossy Straight"></div>
+            <figcaption class="zc-cap">Glossy Straight</figcaption>
+          </figure>
+          <figure class="zc-item">
+            <div class="zc-thumb"><img src="assets/img/trend-04.jpg" alt="Men Short"></div>
+            <figcaption class="zc-cap">Men Short</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Gallery -->
+    <section id="gallery" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title serif">Gallery</h2>
+        <div class="gallery-grid">
+          <img src="assets/img/interior.jpg" alt="店内全景" loading="lazy">
+          <img src="assets/img/service-cut.jpg" alt="カット施術" loading="lazy">
+          <img src="assets/img/service-color.jpg" alt="カラー施術" loading="lazy">
+          <img src="assets/img/hero.jpg" alt="外観・夜景" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Reviews -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <h2 class="section-title serif">Voice</h2>
+        <div class="review-grid">
+          <blockquote class="review">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>上品で扱いやすい髪になりました。空間も落ち着いています。</p>
+            <cite>30代女性</cite>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>ビジネスでも好印象なデザイン。提案が的確で安心。</p>
+            <cite>40代男性</cite>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars" aria-label="4 stars">★★★★☆</div>
+            <p>カラーの色持ちが良い。次はケアもお願いしたい。</p>
+            <cite>20代女性</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Access -->
+    <section id="access" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title serif">Access</h2>
+        <div class="access-grid">
+          <div class="map">
+            <iframe title="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Tokyo&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+          </div>
+          <div class="access-info">
+            <p><strong>住所：</strong> 東京都○○区○○ 1-2-3 Zerosta Bldg. 2F</p>
+            <p><strong>最寄り：</strong> ○○駅 徒歩3分 / 駐車場1台</p>
+            <p><strong>営業時間：</strong> 10:00–19:00（最終受付 18:00）</p>
+            <p><strong>定休日：</strong> 水曜</p>
+            <img class="access-photo" src="assets/img/hero.jpg" alt="サロン外観（夜）" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Contact / CTA -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title serif">Reservation</h2>
+        <div class="card">
+          <p>電話予約：</p>
+          <p class="tel"><a href="tel:0123456789">012-345-6789</a></p>
+          <p>施術中はお電話に出られない場合があります。LINEは24時間受付。</p>
+          <div class="cta-buttons">
+            <a href="https://line.me/R/ti/p/@your_line_id" class="btn btn-primary" target="_blank" rel="noopener">LINEで予約</a>
+            <a href="#" class="btn btn-outline">Webフォーム</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>&copy; 2025 Zerosta Chic</p></div>
+  </footer>
+
+  <!-- 末尾JS（依存なし） -->
+  <script>
+    // 左右ボタンで横スクロール（News/Trends 共通クラスに対応）
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.zc-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const targetSel = btn.getAttribute('data-target');
+          const scroller = document.querySelector(targetSel);
+          if (!scroller) return;
+          const step = Math.round(scroller.clientWidth * 0.85);
+          scroller.scrollBy({ left: btn.classList.contains('next') ? step : -step, behavior: 'smooth' });
+        });
+      });
+
+      // ドラッグ/スワイプでも横スクロール
+      document.querySelectorAll('.zc-scroller').forEach(function (sc) {
+        let isDown = false, startX = 0, startLeft = 0;
+        const start = (x) => { isDown = true; startX = x; startLeft = sc.scrollLeft; sc.classList.add('is-drag'); };
+        const move  = (x) => { if(!isDown) return; sc.scrollLeft = startLeft - (x - startX); };
+        const end   = () => { isDown = false; sc.classList.remove('is-drag'); };
+
+        sc.addEventListener('mousedown', (e)=> start(e.pageX));
+        sc.addEventListener('mousemove', (e)=> move(e.pageX));
+        sc.addEventListener('mouseleave', end);
+        sc.addEventListener('mouseup', end);
+
+        sc.addEventListener('touchstart', (e)=> start(e.touches[0].pageX), {passive:true});
+        sc.addEventListener('touchmove',  (e)=> move(e.touches[0].pageX),  {passive:true});
+        sc.addEventListener('touchend', end);
+      });
+    });
+  </script>
+</body>
+</html>

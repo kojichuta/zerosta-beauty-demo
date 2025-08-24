@@ -1,0 +1,1857 @@
+/* ---------------------------------
+  基本リセット
+--------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* リンク */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+/* 画像 */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* コンテナ */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.4em;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary {
+  background: #C49A9A;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #b17f7f;
+}
+
+.btn-outline {
+  border: 2px solid #C49A9A;
+  color: #C49A9A;
+  background: transparent;
+}
+.btn-outline:hover {
+  background: #C49A9A;
+  color: #fff;
+}
+
+.btn-small {
+  padding: 0.4em 1em;
+  font-size: 0.85rem;
+}
+
+/* ---------------------------------
+  ヘッダー
+--------------------------------- */
+.site-header {
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 0;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #C49A9A;
+}
+
+.nav a {
+  margin-left: 1.2em;
+  font-size: 0.95rem;
+}
+
+/* ---------------------------------
+  ヒーロー
+--------------------------------- */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center 32%;
+  filter: brightness(0.75);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+}
+
+.tagline {
+  margin: 0.5em 0 1em;
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------
+  セクション共通
+--------------------------------- */
+.section {
+  padding: 4em 0;
+}
+
+.section-alt {
+  background: #faf7f7;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.section-title.serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.section-lead {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2em;
+  font-size: 1rem;
+  color: #555;
+}
+
+.muted {
+  color: #777;
+}
+
+/* ---------------------------------
+  カード・グリッド
+--------------------------------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.card h3 {
+  margin: 0.8em 0 0.4em;
+  font-size: 1.1rem;
+  color: #C49A9A;
+}
+
+/* ---------------------------------
+  料金表
+--------------------------------- */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2em;
+}
+
+.price-card {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.price-card h3 {
+  color: #C49A9A;
+  margin-bottom: 0.5em;
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+
+.price-card li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4em;
+}
+
+.price-card strong {
+  color: #333;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.cta-line {
+  text-align: center;
+  margin-top: 2em;
+}
+
+/* ---------------------------------
+  Stylists
+--------------------------------- */
+.stylist-grid {
+  display: grid;
+  gap: 2em;
+}
+
+.stylist {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.stylist img {
+  border-radius: 8px;
+}
+
+.stylist--team {
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------------------------------
+  ギャラリー
+--------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+}
+
+.gallery-grid img {
+  border-radius: 6px;
+}
+
+/* ---------------------------------
+  レビュー
+--------------------------------- */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5em;
+}
+
+.review {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stars {
+  color: #FFD700;
+  margin-bottom: 0.5em;
+}
+
+/* ---------------------------------
+  アクセス
+--------------------------------- */
+.access-grid {
+  display: grid;
+  gap: 2em;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 6px;
+}
+
+.access-info p {
+  margin-bottom: 0.3em;
+}
+
+.access-photo {
+  margin-top: 1em;
+  border-radius: 6px;
+}
+
+/* ---------------------------------
+  お問い合わせ
+--------------------------------- */
+.contact .card {
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tel {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0.3em 0 1em;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------------------------------
+  フッター
+--------------------------------- */
+.site-footer {
+  background: #f0eded;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ---------------------------------
+  レスポンシブ
+--------------------------------- */
+@media (min-width: 768px) {
+  .stylist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .access-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* ===== Relax専用 追加CSS（News slider + Trend grid）===== */
+:root{
+  --relax-shadow: 0 8px 28px rgba(0,0,0,.08);
+  --relax-radius: 14px;
+}
+
+/* News slider */
+.relax-news{ background:#fbf8f7; }
+.relax-slider{ position:relative; }
+.relax-scroller{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns: clamp(280px, 32vw, 360px);
+  gap:18px;
+  overflow-x:auto;
+  padding:6px 2px 12px;
+  scroll-snap-type:x mandatory;
+  scroll-padding: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+.relax-scroller > *{ scroll-snap-align:start; }
+.relax-scroller.dragging{ cursor:grabbing; }
+
+.relax-card{
+  background:#fff; border-radius:var(--relax-radius); overflow:hidden;
+  box-shadow: var(--relax-shadow);
+}
+.relax-thumb{ display:block; aspect-ratio: 16/9; background:#111; }
+.relax-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.relax-body{ padding:14px 14px 16px; }
+.relax-meta{ font-size:12px; color:#777; }
+.relax-title{ font-size:18px; margin:6px 0; line-height:1.4; }
+.relax-text{ font-size:14px; color:#444; }
+
+/* Prev/Next buttons */
+.relax-nav{ position:absolute; inset:0; pointer-events:none; }
+.sbtn{
+  pointer-events:auto;
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:40px; height:40px; border:none; border-radius:999px;
+  background:#fff; box-shadow:var(--relax-shadow); cursor:pointer; font-weight:700;
+}
+.sbtn.prev{ left:-6px; }
+.sbtn.next{ right:-6px; }
+.sbtn:active{ transform:translateY(-50%) scale(.98); }
+
+/* Trends grid (uniform tiles) */
+.relax-trends .section-lead{ margin-bottom: 22px; }
+.relax-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:16px;
+}
+@media(min-width: 900px){
+  .relax-grid{ grid-template-columns: repeat(3, 1fr); gap:22px; }
+}
+.relax-tile{
+  position:relative; overflow:hidden; border-radius:16px; background:#111;
+  box-shadow: var(--relax-shadow); transition: transform .25s ease, box-shadow .25s ease;
+}
+.relax-tile:hover{ transform: translateY(-2px); box-shadow:0 14px 38px rgba(0,0,0,.12); }
+.relax-tile .media{ aspect-ratio: 4/5; }
+.relax-tile img{ width:100%; height:100%; object-fit:cover; display:block; }
+.relax-tile .cap{
+  position:absolute; left:0; right:0; bottom:0; padding:10px 12px 12px;
+  display:flex; gap:8px; flex-wrap:wrap;
+  background: linear-gradient(0deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 70%);
+}
+.relax-tile .cap span{
+  font-size:12px; line-height:1; color:#fff; padding:6px 8px; border-radius:999px;
+  background: rgba(0,0,0,.35); border:1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(2px);
+}
+
+/* 細めスクロールバー（WebKit系） */
+.relax-scroller::-webkit-scrollbar{ height:8px; }
+.relax-scroller::-webkit-scrollbar-thumb{ background:#ddd; border-radius:999px; }
+/* =========================
+   Zerosta Relax テーマ上書き
+   ========================= */
+
+/* トークン（Relax用） */
+.theme-relax {
+  --bg: #fffdf8;
+  --bg-alt: #f6f2ea;
+  --text: #39423a;
+  --muted: #6d776d;
+  --accent: #9bb488;      /* セージグリーン */
+  --accent-2: #cdb6a0;    /* ベージュ寄りの差し色 */
+  --chip: #e7efe2;
+
+  --radius: 14px;
+  --shadow: 0 8px 28px rgba(64, 83, 59, 0.12);
+  --shadow-soft: 0 3px 12px rgba(64, 83, 59, 0.08);
+}
+
+/* ベース色・文字色 */
+.theme-relax body {
+  color: var(--text);
+  background: var(--bg);
+}
+.theme-relax .muted { color: var(--muted); }
+
+/* ヘッダー */
+.theme-relax .site-header {
+  background: rgba(255, 253, 248, 0.9);
+  border-bottom: 1px solid #ece6dc;
+  backdrop-filter: blur(6px);
+}
+.theme-relax .logo { color: var(--accent); }
+
+/* ナビ */
+.theme-relax .nav a {
+  color: var(--text);
+  padding: .25em .4em;
+  border-radius: 10px;
+}
+.theme-relax .nav a:hover {
+  background: #eef3ea;
+  color: var(--text);
+  opacity: 1;
+}
+
+/* ヒーロー：暖色寄りの空気感 + ソフト影 */
+.theme-relax .hero { overflow: hidden; }
+.theme-relax .hero-img {
+  filter: brightness(.95) saturate(1.03);
+}
+.theme-relax .hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(
+    180deg,
+    rgba(235,226,209,.28) 0%,
+    rgba(255,255,255,0) 55%,
+    rgba(235,226,209,.38) 100%
+  );
+  pointer-events:none;
+}
+.theme-relax .hero-text h1 { letter-spacing: .02em; }
+.theme-relax .tagline { color: var(--text); opacity: .9; }
+
+/* セクション背景 */
+.theme-relax .section-alt { background: var(--bg-alt); }
+
+/* カード・ボックスの丸みと影 */
+.theme-relax .card,
+.theme-relax .price-card,
+.theme-relax .review,
+.theme-relax .contact .card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+.theme-relax .card,
+.theme-relax .price-card,
+.theme-relax .contact .card {
+  background: #fff;
+}
+
+/* ボタン */
+.theme-relax .btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.theme-relax .btn-primary:hover { background: #89a877; }
+
+.theme-relax .btn-outline {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.theme-relax .btn-outline:hover{
+  background: var(--accent);
+  color:#fff;
+}
+
+/* 見出し（やわらかさ重視） */
+.theme-relax .section-title.serif {
+  font-family: 'Playfair Display', serif;
+  color: #485348;
+}
+
+/* 画像角丸（全体を少しだけ柔らかく） */
+.theme-relax img { border-radius: 10px; }
+
+/* 料金表の見た目微調整 */
+.theme-relax .price-card h3 { color: #5b6a57; }
+.theme-relax .price-card strong { color: #2f352f; }
+
+/* レビューの★色を少し落ち着かせる */
+.theme-relax .stars { color: #f2c66b; }
+
+/* ギャラリー・ニュース・トレンドのタグ風ラベル（任意） */
+.theme-relax .chip {
+  display:inline-block; padding:.25em .6em;
+  background: var(--chip);
+  color:#456045;
+  border-radius: 999px; font-size:.85rem;
+}
+
+/* アニメーション：ふわっと */
+@keyframes soft-fade-up {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.theme-relax .section .container > * {
+  animation: soft-fade-up .6s ease-out both;
+}
+.theme-relax .card,
+.theme-relax .price-card,
+.theme-relax .review { animation-delay: .05s; }
+
+/* ニュース・トレンドカード（角・影・トーン） */
+.theme-relax .news-card,
+.theme-relax .trend-card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+.theme-relax .news-card .meta { color: var(--muted); }
+
+/* フッター */
+.theme-relax .site-footer {
+  background: #f0ece3;
+  color: #6b756b;
+}
+/* =========================================================
+   Zerosta Relax theme (CSS only)
+   ---------------------------------------------------------
+   ・ヘッダー：透過・ガラス調、ロゴ中央寄せ、ナビはピル型
+   ・ヒーロー：左寄せレイアウト＋やわらかいグラデ被せ
+   ・カード：丸み強め＆ふわっと影、ベージュ基調
+   ・ニュース：ボード風カード、サムネ角丸 & 影
+   ・トレンド：画像比率統一（4/5）、チップも柔らか
+   ・全体：タイポや余白を“呼吸感”ある方向へ
+   ========================================================= */
+body.theme-relax{
+  --relax-bg: #FAF7F1;
+  --relax-surface: #FFFFFF;
+  --relax-card: #FFFFFF;
+  --relax-text: #3A3A3A;
+  --relax-muted: #7B7B7B;
+  --relax-accent: #C49A9A;          /* そのままでもOK。好みで #BFA38A などに */
+  --relax-accent-2: #7BA686;        /* グリーン系アクセント */
+  --relax-ring: rgba(123,166,134,.25);
+  --relax-shadow: 0 8px 24px rgba(60,50,40,0.10);
+  color: var(--relax-text);
+  background: var(--relax-bg);
+}
+
+/* ---------------- Header：ガラス調＋ピル型ナビ ---------------- */
+body.theme-relax .site-header{
+  position: sticky; top:0; z-index: 1000;
+  background: rgba(255,255,255,.65);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+body.theme-relax .header-inner{
+  padding: .7em 0;
+  gap: 1rem;
+}
+body.theme-relax .brand .logo{
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: .02em;
+  color: var(--relax-accent-2);
+}
+body.theme-relax .nav{
+  display: flex; align-items: center; gap: .4rem;
+  flex-wrap: wrap;
+}
+body.theme-relax .nav a{
+  padding: .45em .9em;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,.06);
+  font-size: .92rem;
+}
+body.theme-relax .nav a:hover{
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+/* 予約ボタンだけ強調（優しい色） */
+body.theme-relax .nav .btn{
+  border: none;
+  background: var(--relax-accent-2);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(123,166,134,.35);
+}
+body.theme-relax .nav .btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(123,166,134,.38);
+}
+
+/* ---------------- Hero：左寄せ・グラデオーバー ---------------- */
+body.theme-relax .hero{
+  color: #2e2e2e;
+}
+body.theme-relax .hero-img{
+  filter: brightness(.9) saturate(.98);
+  object-position: center 60%;
+}
+body.theme-relax .hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(90deg, rgba(250,247,241,.85) 0%, rgba(250,247,241,.35) 40%, rgba(250,247,241,0) 65%);
+  pointer-events:none;
+}
+body.theme-relax .hero-text{
+  left: max(8%, 60px);
+  right: auto;
+  transform: translateY(-50%);
+  text-align: left;
+}
+body.theme-relax .hero-text .serif{
+  font-weight: 700;
+  color: #2c2c2c;
+  text-shadow: none;
+}
+body.theme-relax .tagline{
+  color: var(--relax-muted);
+}
+body.theme-relax .btn-primary{
+  background: var(--relax-accent-2);
+  box-shadow: 0 10px 24px rgba(123,166,134,.35);
+}
+body.theme-relax .btn-primary:hover{ background:#6C9877; }
+
+/* ---------------- Sections：ゆるい角丸＆ふわ影 ---------------- */
+body.theme-relax .section{ padding: 4.5em 0; }
+body.theme-relax .section-alt{ background: #F5F1EA; }
+
+body.theme-relax .card,
+body.theme-relax .price-card,
+body.theme-relax .review{
+  background: var(--relax-card);
+  border-radius: 18px;
+  box-shadow: var(--relax-shadow);
+  border: 1px solid rgba(0,0,0,.04);
+}
+body.theme-relax .card img,
+body.theme-relax .gallery-grid img{
+  border-radius: 14px;
+}
+
+/* Concept の3カード：余白広め＋見出しカラー */
+body.theme-relax #concept .card h3{
+  color: var(--relax-accent-2);
+  letter-spacing: .02em;
+}
+
+/* 料金表：区切りをやさしく */
+body.theme-relax .price-card li{
+  border-bottom: 1px dashed rgba(0,0,0,.08);
+  padding: .45em 0;
+}
+
+/* ---------------- Stylists：柔らかレイアウト ---------------- */
+body.theme-relax .stylist--team{
+  background: linear-gradient(180deg,#fff, #f8f4ee);
+  border-radius: 22px;
+  padding: 1.5em;
+  box-shadow: var(--relax-shadow);
+}
+
+/* ---------------- News：ボードカード＋角丸サムネ ------------- */
+body.theme-relax .news-card,
+body.theme-relax .news .card{
+  display: flex; flex-direction: column;
+  background: var(--relax-surface);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--relax-shadow);
+  border: 1px solid rgba(0,0,0,.05);
+}
+body.theme-relax .news-card img,
+body.theme-relax .news .card img{
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+body.theme-relax .news .meta{ color: var(--relax-muted); font-size:.9rem; }
+
+/* スライダー矢印（丸くて影あり） */
+body.theme-relax .slider-arrow{
+  width: 44px; height: 44px; border-radius: 999px;
+  background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+/* ---------------- Trends：比率統一＆チップ ------------------- */
+body.theme-relax .trend-card{
+  background: var(--relax-surface);
+  border-radius: 22px;
+  box-shadow: var(--relax-shadow);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.05);
+}
+body.theme-relax .trend-card img{
+  width:100%; aspect-ratio: 4 / 5; object-fit: cover;
+}
+body.theme-relax .trend-tags .tag{
+  background: #E9F2EC; color: #3A6A4A;
+  border: none; border-radius: 999px; padding: .28em .7em;
+  font-size: .82rem;
+}
+
+/* ---------------- Reviews：星色やや控えめ ------------------- */
+body.theme-relax .stars{ color: #FFC96B; }
+
+/* ---------------- Access：Map枠やさしく --------------------- */
+body.theme-relax .map iframe{
+  border-radius: 14px;
+  box-shadow: var(--relax-shadow);
+}
+
+/* ---------------- Footer：淡色 ------------------------------- */
+body.theme-relax .site-footer{
+  background: #EFEAE2; color: #6b6b6b;
+}
+
+/* ---------------- 小さめスクリーン調整 ---------------------- */
+@media (max-width: 768px){
+  body.theme-relax .hero-text{ left: 6%; right: 6%; }
+  body.theme-relax .nav{ gap: .3rem; }
+}
+/* ===================== Zerosta Relax : layout v2 ===================== */
+body.theme-relax.relax-v2{
+  --bg: #FAF7F1;
+  --surface:#FFFFFF;
+  --ink:#2f2f2f;
+  --muted:#7a7a7a;
+  --green:#7BA686;
+  --chip:#E9F2EC;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* ---- Header：ロゴ中央＋下段タブ化（ヒーロー上に半透明で重ね） ---- */
+body.theme-relax.relax-v2 .site-header{
+  position: absolute; inset: 0 0 auto 0; background: transparent; border: none;
+}
+body.theme-relax.relax-v2 .header-inner{
+  padding: 18px 0 0; flex-direction: column; gap: 16px;
+}
+body.theme-relax.relax-v2 .brand{ text-align:center; }
+body.theme-relax.relax-v2 .brand .logo{ font-weight:900; color: var(--green); letter-spacing:.02em; }
+
+body.theme-relax.relax-v2 .nav{
+  justify-content: center; flex-wrap: wrap; gap: 8px;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,.06);
+  padding: 8px; border-radius: 999px; width: max-content; margin: 0 auto;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+body.theme-relax.relax-v2 .nav a{
+  border-radius: 999px; padding: .45em .9em; border: none;
+}
+body.theme-relax.relax-v2 .nav .btn{ background: var(--green); color:#fff; }
+
+/* ---- Hero：スプリット構成（左カード＋右に写真） ---- */
+body.theme-relax.relax-v2 .hero{ min-height: 78vh; }
+body.theme-relax.relax-v2 .hero-img{
+  height: 78vh; filter: brightness(.95) saturate(.98); object-position:center 58%;
+}
+body.theme-relax.relax-v2 .hero::after{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(800px 400px at 12% 55%, rgba(255,255,255,.85), transparent 60%),
+    linear-gradient(180deg, rgba(250,247,241,.6), rgba(250,247,241,0) 35%, transparent 60%);
+}
+body.theme-relax.relax-v2 .hero-text{
+  left: clamp(24px,6%,72px); right:auto; text-align:left;
+  transform: translateY(-50%);
+  max-width: 560px;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(6px);
+  padding: 28px 28px 24px; border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.12);
+}
+body.theme-relax.relax-v2 .hero-text .serif{ color:#1f1f1f; }
+body.theme-relax.relax-v2 .btn-primary{ background: var(--green); box-shadow: 0 12px 26px rgba(123,166,134,.35); }
+
+/* ---- Section 波形セパレータ（上/下） ---- */
+body.theme-relax.relax-v2 .section{
+  position: relative; padding: 5em 0;
+}
+body.theme-relax.relax-v2 .section::before,
+body.theme-relax.relax-v2 .section::after{
+  content:""; position:absolute; left:0; width:100%; height:48px; pointer-events:none;
+  background-repeat:no-repeat; background-size: 120% 100%;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.06));
+}
+body.theme-relax.relax-v2 .section::before{
+  top:-46px;
+  background-image: radial-gradient(60% 120% at 50% 180%, #fff 0 60%, transparent 61%);
+}
+body.theme-relax.relax-v2 .section.section-alt::before{
+  background-image: radial-gradient(60% 120% at 50% 180%, #F5F1EA 0 60%, transparent 61%);
+}
+body.theme-relax.relax-v2 .section::after{
+  bottom:-46px;
+  background-image: radial-gradient(60% 120% at 50% -80%, #fff 0 60%, transparent 61%);
+}
+body.theme-relax.relax-v2 .section.section-alt{ background:#F5F1EA; }
+
+/* ---- Card共通：強めの丸みとやわ影 ---- */
+body.theme-relax.relax-v2 .card,
+body.theme-relax.relax-v2 .price-card,
+body.theme-relax.relax-v2 .review{
+  border-radius: 22px; border:1px solid rgba(0,0,0,.05); background: var(--surface);
+  box-shadow: 0 16px 36px rgba(0,0,0,.10);
+}
+body.theme-relax.relax-v2 .card img{ border-radius: 16px; }
+
+/* ---- Concept 3枚：見出しをグリーンに ---- */
+body.theme-relax.relax-v2 #concept .card h3{ color: var(--green); }
+
+/* ---- News：横スクロール＋スナップ ---- */
+body.theme-relax.relax-v2 #news .container{ overflow: hidden; }
+body.theme-relax.relax-v2 #news .news-rail{
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(280px, 34vw);
+  gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 6px 12px;
+}
+body.theme-relax.relax-v2 #news .card{
+  scroll-snap-align: start; border-radius: 20px; overflow:hidden;
+}
+body.theme-relax.relax-v2 #news .card img{ aspect-ratio: 16/9; object-fit: cover; }
+
+/* ---- Trends：2列のピンタレスト風（高さ可変） ---- */
+body.theme-relax.relax-v2 #trends .trend-grid{
+  column-count: 2; column-gap: 20px;
+}
+@media (min-width: 1024px){
+  body.theme-relax.relax-v2 #trends .trend-grid{ column-count: 3; }
+}
+body.theme-relax.relax-v2 #trends .trend-card{
+  display: inline-block; width: 100%; margin: 0 0 20px;
+  border-radius: 22px; overflow: hidden; background: var(--surface);
+  box-shadow: 0 14px 30px rgba(0,0,0,.10); border:1px solid rgba(0,0,0,.05);
+}
+body.theme-relax.relax-v2 #trends .trend-card img{
+  width: 100%; height: auto; display:block;
+}
+body.theme-relax.relax-v2 .trend-tags .tag{
+  background: var(--chip); color:#2f5c3f; border-radius: 999px; padding:.28em .7em; border:none;
+}
+
+/* ---- Footer：淡色＋ゆる角 ---- */
+body.theme-relax.relax-v2 .site-footer{ background:#EFEAE2; border-top-left-radius: 24px; border-top-right-radius: 24px; }
+/* ===================== Relax v3 layout ===================== */
+body.theme-relax.relax-v3{
+  --bg: #FAF7F1;
+  --surface:#FFFFFF;
+  --ink:#2f2f2f;
+  --muted:#6f6f6f;
+  --green:#7BA686;
+  --chip:#E9F2EC;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Header pill nav overlay */
+body.theme-relax.relax-v3 .site-header{ position:absolute; inset:0 0 auto 0; background:transparent; border:none; }
+body.theme-relax.relax-v3 .header-inner{ padding:18px 0 0; flex-direction:column; gap:16px; }
+body.theme-relax.relax-v3 .brand{ text-align:center; }
+body.theme-relax.relax-v3 .brand .logo{ color:var(--green); font-weight:900; letter-spacing:.02em; }
+body.theme-relax.relax-v3 .nav.nav-pill{
+  justify-content:center; gap:8px; background:rgba(255,255,255,.78);
+  backdrop-filter: blur(10px); border:1px solid rgba(0,0,0,.06);
+  padding:8px; border-radius:999px; width:max-content; margin:0 auto;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+body.theme-relax.relax-v3 .nav a{ border-radius:999px; padding:.45em .9em; }
+body.theme-relax.relax-v3 .nav .btn{ background:var(--green); color:#fff; }
+
+/* Hero solid card + gentle gradients */
+body.theme-relax.relax-v3 .hero{ min-height:78vh; }
+body.theme-relax.relax-v3 .hero-img{ height:78vh; object-position:center 58%; filter:brightness(.98) saturate(.98); }
+body.theme-relax.relax-v3 .hero::after{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(250,247,241,.6), rgba(250,247,241,0) 35%, transparent 60%);
+}
+body.theme-relax.relax-v3 .hero-text.card-solid{
+  left: clamp(20px,6%,72px); right:auto; text-align:left; transform: translateY(-50%);
+  max-width: 640px;
+  background: #fff; /* ←ソリッド */
+  padding: 32px 36px 28px; border-radius: 22px;
+  box-shadow: 0 20px 42px rgba(0,0,0,.14);
+}
+body.theme-relax.relax-v3 .hero-text.card-solid .serif{ color:#2a2a2a; }
+body.theme-relax.relax-v3 .btn-primary{ background:var(--green); box-shadow: 0 12px 26px rgba(123,166,134,.35); }
+
+/* Section wave separators & bg alt */
+body.theme-relax.relax-v3 .section{ position:relative; padding:5em 0; }
+body.theme-relax.relax-v3 .section.section-alt{ background:#F5F1EA; }
+body.theme-relax.relax-v3 .section::before,
+body.theme-relax.relax-v3 .section::after{
+  content:""; position:absolute; left:0; width:100%; height:48px; pointer-events:none;
+  background-repeat:no-repeat; background-size:120% 100%;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.06));
+}
+body.theme-relax.relax-v3 .section::before{ top:-46px;
+  background-image: radial-gradient(60% 120% at 50% 180%, #fff 0 60%, transparent 61%); }
+body.theme-relax.relax-v3 .section.section-alt::before{
+  background-image: radial-gradient(60% 120% at 50% 180%, #F5F1EA 0 60%, transparent 61%); }
+body.theme-relax.relax-v3 .section::after{ bottom:-46px;
+  background-image: radial-gradient(60% 120% at 50% -80%, #fff 0 60%, transparent 61%); }
+
+/* Cards rounded */
+body.theme-relax.relax-v3 .card,
+body.theme-relax.relax-v3 .price-card,
+body.theme-relax.relax-v3 .review{
+  border-radius:22px; border:1px solid rgba(0,0,0,.05); background:var(--surface);
+  box-shadow:0 16px 36px rgba(0,0,0,.10);
+}
+body.theme-relax.relax-v3 .card img{ border-radius:16px; }
+
+/* Concept accent */
+body.theme-relax.relax-v3 #concept .card h3{ color:var(--green); }
+
+/* News horizontal snap */
+body.theme-relax.relax-v3 #news .container{ overflow:hidden; }
+body.theme-relax.relax-v3 #news .news-rail{
+  display:grid; grid-auto-flow:column; grid-auto-columns:minmax(280px,34vw);
+  gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; padding:6px 6px 12px;
+}
+body.theme-relax.relax-v3 #news .card{ scroll-snap-align:start; overflow:hidden; }
+body.theme-relax.relax-v3 #news .card img{ aspect-ratio:16/9; object-fit:cover; }
+body.theme-relax.relax-v3 #news .pad{ padding:14px 16px 18px; }
+
+/* Trends masonry */
+body.theme-relax.relax-v3 #trends .trend-grid{ column-count:2; column-gap:20px; }
+@media (min-width:1024px){ body.theme-relax.relax-v3 #trends .trend-grid{ column-count:3; } }
+body.theme-relax.relax-v3 #trends .trend-card{
+  display:inline-block; width:100%; margin:0 0 20px; overflow:hidden;
+  border-radius:22px; background:#fff; border:1px solid rgba(0,0,0,.05); box-shadow:0 14px 30px rgba(0,0,0,.10);
+}
+body.theme-relax.relax-v3 #trends .trend-card img{ width:100%; height:auto; display:block; }
+body.theme-relax.relax-v3 .trend-tags{ display:flex; gap:8px; padding:10px 12px 14px; }
+body.theme-relax.relax-v3 .trend-tags .tag{ background:var(--chip); color:#2f5c3f; border-radius:999px; padding:.28em .7em; }
+
+/* Soft animations */
+@media (prefers-reduced-motion: no-preference){
+  .section [class*="grid"] > *{ opacity:0; transform:translateY(14px); animation: popFade .6s ease .1s forwards; }
+  .hero-text.card-solid{ opacity:0; transform:translate(-6px,-46%); animation: popFade .8s ease .15s forwards; }
+  @keyframes popFade{ to{ opacity:1; transform:translate(0,0);} }
+}
+
+/* Footer */
+body.theme-relax.relax-v3 .site-footer{ background:#EFEAE2; border-top-left-radius:24px; border-top-right-radius:24px; }
+/* ===== Relax パッチ（共通補修） ===== */
+
+/* 画像は親幅にフィット */
+img { max-width: 100%; height: auto; display: block; }
+
+/* セクションの縦余白をデバイスに追従 */
+.section { padding: clamp(48px, 6vw, 96px) 0; }
+
+/* ---- ヒーロー：文字の視認性アップ ---- */
+.card-solid{
+  background: rgba(255,255,255,.92);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  padding: clamp(16px, 3vw, 28px);
+}
+.hero { position: relative; overflow: hidden; }
+.hero-img{ width:100%; height:auto; object-fit: cover; }
+
+/* ---- ナビ（ピル）をモバイルで崩さない ---- */
+.nav.nav-pill{
+  display:flex; gap:8px; justify-content:center;
+  background: rgba(255,255,255,.78);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(0,0,0,.06);
+  padding:8px; border-radius: 999px;
+  width:max-content; max-width: calc(100% - 24px);
+  margin: 0 auto; box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+@media (max-width: 768px){
+  .nav.nav-pill{ flex-wrap: wrap; justify-content: center; }
+  .nav.nav-pill a{ padding:8px 12px; font-size: 14px; }
+}
+
+/* ---- グリッドをモバイルで1列化 ---- */
+.feature-grid,
+.stylist-grid,
+.price-grid,
+.trend-grid,
+.gallery-grid,
+.review-grid,
+.access-grid{
+  display: grid;
+  gap: 20px;
+}
+.feature-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.stylist-grid{ grid-template-columns: repeat(5,minmax(0,1fr)); }
+.price-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.trend-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.gallery-grid{ grid-template-columns: repeat(4,minmax(0,1fr)); }
+.review-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.access-grid{ grid-template-columns: 1.2fr 1fr; align-items: start; }
+
+@media (max-width: 1024px){
+  .feature-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .stylist-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .price-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .trend-grid{ grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .gallery-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .review-grid{ grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .access-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px){
+  .feature-grid,
+  .stylist-grid,
+  .price-grid,
+  .trend-grid,
+  .gallery-grid,
+  .review-grid{
+    grid-template-columns: 1fr;
+  }
+  .site-header .container { padding-inline: 12px; }
+  .section-lead{ font-size: 15px; line-height: 1.8; }
+  .hero .serif{ font-size: clamp(28px, 8vw, 40px); }
+}
+
+/* ---- 横スクロール抑止 ---- */
+html, body { overflow-x: hidden; }
+
+/* ---- Newsレールがはみ出す場合に備えて ---- */
+.news-rail{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(85vw, 420px);
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+.news-rail > .card{ scroll-snap-align: start; }
+
+/* ---- 画像の角丸と影（Relaxのやわらかさ） ---- */
+.card img,
+.trend-card img,
+.gallery-grid img,
+.access-photo{
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}
+
+/* ---- Relaxのアクセントカラー（読みやすさ強化） ---- */
+.theme-relax .btn-primary{
+  background:#8fb59a; /* 落ち着いたグリーン */
+  border-color:#8fb59a;
+}
+.theme-relax .btn-primary:hover{ filter: brightness(0.95); }
+/*************************************************************
+  Zerosta Relax 専用スキン（追加CSS）
+  - 丸ゴ × ナチュラル配色 × ふわっとした動き
+*************************************************************/
+
+/* ---- Relax パレット（やわらかい自然色） ---- */
+:root {
+  --relax-ink: #2e2a27;
+  --relax-ink-soft: #5b554f;
+  --relax-accent: #8fb59a;         /* ボタン/リンクの基調 */
+  --relax-accent-2: #c7d9cc;       /* ホバーやタグの淡色 */
+  --relax-surface: #fffaf4;        /* セクションの面色 */
+  --relax-surface-2: #f6f2ea;
+  --relax-line: rgba(46,42,39,.08);
+  --relax-shadow: 0 10px 28px rgba(0,0,0,.08);
+  --relax-radius: 16px;
+}
+
+/* ---- 書体・文字組（Relax＝丸ゴ主体） ---- */
+.theme-relax {
+  font-family: "Zen Maru Gothic","Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  color: var(--relax-ink);
+  letter-spacing: .01em;
+}
+.theme-relax .serif {
+  /* 見出しだけ既存のPlayfairを残して “柔×品” を両立 */
+  font-family: "Playfair Display","Zen Maru Gothic","Noto Sans JP",serif;
+}
+
+/* ---- ボタン（ふわっと浮く） ---- */
+.theme-relax .btn-primary{
+  background: var(--relax-accent);
+  border: 2px solid var(--relax-accent);
+  color: #fff;
+  box-shadow: var(--relax-shadow);
+  transform: translateZ(0);
+  transition: transform .25s ease, filter .25s ease, box-shadow .25s ease;
+}
+.theme-relax .btn-primary:hover{
+  filter: brightness(.97);
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 14px 34px rgba(0,0,0,.12);
+}
+.theme-relax .btn-outline{
+  border: 2px solid var(--relax-accent);
+  color: var(--relax-accent);
+  background: transparent;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.theme-relax .btn-outline:hover{
+  background: var(--relax-accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ---- カード/画像の質感（角丸・柔らかい影） ---- */
+.theme-relax .card,
+.theme-relax .review,
+.theme-relax .price-card{
+  border-radius: var(--relax-radius);
+  box-shadow: var(--relax-shadow);
+  border: 1px solid var(--relax-line);
+}
+.theme-relax .card img,
+.theme-relax .gallery-grid img,
+.theme-relax .trend-card img,
+.theme-relax .access-photo{
+  border-radius: calc(var(--relax-radius) - 4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  transition: transform .35s ease;
+}
+.theme-relax .card:hover img,
+.theme-relax .trend-card:hover img{
+  transform: scale(1.02);
+}
+
+/* ---- セクションの面/余白（Relaxは“空気”を入れる） ---- */
+.theme-relax .section { padding: clamp(56px, 7vw, 112px) 0; }
+.theme-relax .section-alt { background: var(--relax-surface); }
+.theme-relax .section + .section-alt { border-top: 1px solid var(--relax-line); }
+
+/* ゆるい波の仕切り（背景に軽くあしらい） */
+.theme-relax .section-alt {
+  position: relative;
+  overflow: hidden;
+}
+.theme-relax .section-alt::before{
+  content: "";
+  position: absolute; inset: -10% -5% auto -5%;
+  height: 140px;
+  background: radial-gradient(120% 70% at 50% 0%, var(--relax-surface-2), transparent 70%);
+  opacity: .65;
+  pointer-events: none;
+}
+
+/* ---- ヘッダー/ナビ（ピル＋グラスモーフ） ---- */
+.theme-relax .nav.nav-pill{
+  display:flex; gap:8px; justify-content:center;
+  background: rgba(255,255,255,.78);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border:1px solid var(--relax-line);
+  padding:8px; border-radius: 999px;
+  width:max-content; max-width: calc(100% - 24px);
+  margin: 0 auto;
+  box-shadow: var(--relax-shadow);
+}
+.theme-relax .nav.nav-pill a{
+  padding:10px 14px;
+  border-radius: 999px;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.theme-relax .nav.nav-pill a:hover{
+  background: var(--relax-accent-2);
+  color: var(--relax-ink);
+  transform: translateY(-1px);
+}
+@media (max-width: 768px){
+  .theme-relax .nav.nav-pill{ flex-wrap: wrap; }
+}
+
+/* ---- ヒーロー（カードの視認性最適化） ---- */
+.theme-relax .hero { position: relative; }
+.theme-relax .card-solid{
+  background: rgba(255,255,255,.94);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: var(--relax-radius);
+  box-shadow: var(--relax-shadow);
+  padding: clamp(16px, 3vw, 28px);
+  border: 1px solid var(--relax-line);
+}
+.theme-relax .hero .tagline{ color: var(--relax-ink-soft); }
+
+/* ---- Concept（丸み＆空気感） ---- */
+.theme-relax .feature-grid{ gap: 24px; }
+.theme-relax .feature-grid .card h3{ color: var(--relax-accent); }
+.theme-relax .section-lead{ color: var(--relax-ink-soft); }
+
+/* ---- Trends（やわらかいタグ＋自然なタイル） ---- */
+.theme-relax .trend-grid{
+  display:grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 18px;
+}
+@media (max-width: 1024px){ .theme-relax .trend-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 768px){  .theme-relax .trend-grid{ grid-template-columns: 1fr; } }
+
+.theme-relax .trend-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--relax-radius);
+  background: #111;
+  aspect-ratio: 4 / 5; /* 画像サイズ統一 */
+  box-shadow: var(--relax-shadow);
+  border: 1px solid var(--relax-line);
+}
+.theme-relax .trend-tags{
+  position:absolute; left:0; right:0; bottom:0;
+  display:flex; flex-wrap:wrap; gap:8px;
+  padding: 12px 14px 16px;
+  background: linear-gradient(0deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 70%);
+}
+.theme-relax .trend-tags .tag{
+  font-size: 12px; line-height: 1;
+  color:#1f372b;
+  background: #e5f0e9;
+  border: 1px solid #d7e6db;
+  padding: 6px 10px;
+  border-radius: 999px;
+  backdrop-filter: blur(1px);
+}
+
+/* ---- News（横スライドを“穏やか”に） ---- */
+.theme-relax .news-rail{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(85vw, 420px);
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 4px 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.theme-relax .news-rail > .card{
+  scroll-snap-align: start;
+  border-radius: var(--relax-radius);
+  border: 1px solid var(--relax-line);
+  box-shadow: var(--relax-shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.theme-relax .news-rail > .card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+}
+.theme-relax .news-rail img{ aspect-ratio: 16 / 9; object-fit: cover; }
+
+/* ---- Review/Access/ギャラリー（色トーン統一） ---- */
+.theme-relax .stars{ color: #e8c95a; }
+.theme-relax .map iframe{ border-radius: var(--relax-radius); }
+.theme-relax .gallery-grid{ gap: 16px; }
+
+/* ---- モバイル最適化（崩れ抑止） ---- */
+@media (max-width: 1024px){
+  .theme-relax .stylist-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .theme-relax .price-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .theme-relax .gallery-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media (max-width: 768px){
+  .theme-relax .feature-grid,
+  .theme-relax .stylist-grid,
+  .theme-relax .price-grid,
+  .theme-relax .gallery-grid,
+  .theme-relax .review-grid{
+    grid-template-columns: 1fr;
+  }
+  .theme-relax .section-lead{ font-size: 15px; line-height: 1.8; }
+  .theme-relax .hero .serif{ font-size: clamp(28px, 8vw, 40px); }
+}
+
+/* ---- 細部の色味調整 ---- */
+.theme-relax .logo,
+.theme-relax .section-title.serif { color: var(--relax-ink); }
+.theme-relax .muted { color: var(--relax-ink-soft); }
+/*************************************************************
+  Zerosta Relax v4 スキン（強制丸ゴ・質感・動き・波）
+*************************************************************/
+
+/* パレット */
+.theme-relax {
+  --ink: #2e2a27;
+  --ink-soft: #5b554f;
+  --accent: #8fb59a;
+  --accent-2: #cfe0d6;
+  --surface: #fffaf4;
+  --surface-2: #f6f2ea;
+  --line: rgba(46,42,39,.10);
+  --shadow: 0 14px 34px rgba(0,0,0,.10);
+  --radius: 18px;
+}
+
+/* 1) 書体を“必ず”丸ゴへ（!important で上書き） */
+.theme-relax,
+.theme-relax *:not(i):not(svg):not(code){
+  font-family: "Zen Maru Gothic","Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif !important;
+  color: var(--ink);
+}
+.theme-relax h1,.theme-relax h2,.theme-relax h3,.theme-relax .section-title{
+  letter-spacing: .01em;
+}
+
+/* 2) ヘッダー：浮遊するピル */
+.header-float{
+  background: transparent;
+  border: none;
+}
+.header-float .header-inner{
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 0;
+}
+.theme-relax .nav.nav-pill{
+  display:flex; gap:10px; justify-content:center;
+  background: rgba(255,255,255,.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border:1px solid var(--line);
+  padding:10px 12px; border-radius: 999px;
+  width:max-content; max-width: calc(100% - 24px);
+  box-shadow: var(--shadow);
+}
+.theme-relax .nav.nav-pill a{
+  padding:10px 14px; border-radius:999px;
+  transition: background .28s ease, transform .28s ease, color .28s ease;
+}
+.theme-relax .nav.nav-pill a:hover{
+  background: var(--accent-2);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+@media (max-width: 768px){ .theme-relax .nav.nav-pill{ flex-wrap:wrap; } }
+
+/* 3) ヒーロー：左カード＋右全面写真＋波 */
+.hero-relax{ position: relative; overflow: hidden; }
+.hero-relax .hero-img{
+  width:100%; height: clamp(70vh, 78vh, 88vh);
+  object-fit: cover; object-position: center;
+  filter: saturate(1.02);
+}
+.theme-relax .hero-card{
+  position:absolute; left: min(6%, 56px); top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.94);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border:1px solid var(--line);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 3.5vw, 36px);
+  max-width: min(520px, 86%);
+}
+.theme-relax .hero-card h1{
+  font-size: clamp(32px, 5.4vw, 56px);
+  margin-bottom: .2em;
+}
+.theme-relax .hero-card .tagline{ color: var(--ink-soft); margin-bottom: .8em; }
+
+/* 波セパレータ */
+.wave-sep{ position: relative; margin-top: -60px; }
+.wave-sep svg{ width: 100%; height: 120px; display:block; }
+.wave-sep path{ fill: var(--surface); opacity: .95; }
+.wave-sep.wave-light path{ fill: var(--surface-2); }
+
+/* 4) セクションの余白＆面 */
+.theme-relax .section{ padding: clamp(56px, 8vw, 116px) 0; }
+.theme-relax .section-alt{ background: var(--surface); }
+.relax-section .section-title{
+  font-weight: 700; font-size: clamp(26px, 3.2vw, 36px);
+  margin-bottom: 10px;
+}
+.relax-section .section-lead{
+  color: var(--ink-soft); max-width: 820px; margin: 0 auto 28px; text-align:center;
+}
+
+/* 5) カード：オーガニック角丸＋柔らか影 */
+.card.soft, .review.soft, .price-card.soft{
+  border-radius: var(--radius);
+  border:1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+.card.round img{ border-radius: 20px; }
+.theme-relax .card img,
+.theme-relax .gallery-grid img,
+.theme-relax .trend-card img{
+  border-radius: calc(var(--radius) - 6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  transition: transform .35s ease;
+}
+.theme-relax .card:hover img,
+.theme-relax .trend-card:hover img{ transform: scale(1.02); }
+
+/* 6) ボタン：ふわっと */
+.theme-relax .btn-primary{
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow);
+  transform: translateZ(0);
+  transition: transform .28s ease, filter .28s ease, box-shadow .28s ease;
+}
+.theme-relax .btn-primary:hover{
+  filter: brightness(.98);
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 18px 44px rgba(0,0,0,.14);
+}
+.theme-relax .btn-outline{
+  border: 2px solid var(--accent);
+  color: var(--accent); background: transparent;
+  transition: background .28s ease, color .28s ease, transform .28s ease;
+}
+.theme-relax .btn-outline:hover{ background: var(--accent); color:#fff; transform: translateY(-1px); }
+.theme-relax .btn-lg{ padding: .8em 1.6em; font-size: 1rem; border-radius: 999px; }
+
+/* 7) グリッド（余白広め） */
+.theme-relax .feature-grid,
+.theme-relax .stylist-grid,
+.theme-relax .price-grid,
+.theme-relax .trend-grid,
+.theme-relax .gallery-grid,
+.theme-relax .review-grid,
+.theme-relax .access-grid{
+  display:grid; gap: 22px;
+}
+.theme-relax .feature-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.theme-relax .price-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.theme-relax .stylist-grid{ grid-template-columns: repeat(5,minmax(0,1fr)); }
+.theme-relax .trend-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.theme-relax .gallery-grid{ grid-template-columns: repeat(4,minmax(0,1fr)); }
+.theme-relax .review-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); }
+.theme-relax .access-grid{ grid-template-columns: 1.2fr 1fr; align-items: start; }
+
+@media (max-width: 1024px){
+  .theme-relax .stylist-grid{ grid-template-columns: repeat(3,1fr); }
+  .theme-relax .gallery-grid{ grid-template-columns: repeat(3,1fr); }
+  .theme-relax .trend-grid{ grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 768px){
+  .theme-relax .feature-grid,
+  .theme-relax .price-grid,
+  .theme-relax .stylist-grid,
+  .theme-relax .trend-grid,
+  .theme-relax .gallery-grid,
+  .theme-relax .review-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 8) Trends：やさしいタグ＋統一比率 */
+.theme-relax .trend-card{
+  position:relative; overflow:hidden;
+  border-radius: var(--radius);
+  border:1px solid var(--line);
+  background:#111;
+  aspect-ratio: 4 / 5; /* 画像サイズ統一 */
+  box-shadow: var(--shadow);
+}
+.theme-relax .trend-tags{
+  position:absolute; left:0; right:0; bottom:0;
+  display:flex; gap:8px; flex-wrap:wrap;
+  padding: 12px 14px 16px;
+  background: linear-gradient(0deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 70%);
+}
+.theme-relax .trend-tags span{
+  font-size: 12px; line-height: 1;
+  color:#1f372b; background:#e6f1ea; border:1px solid #d7e4db;
+  padding:6px 10px; border-radius:999px; backdrop-filter: blur(1px);
+}
+
+/* 9) News：穏やかスライド */
+.theme-relax .news-rail{
+  display:grid; grid-auto-flow:column;
+  grid-auto-columns: min(86vw, 460px);
+  gap: 18px; overflow-x:auto; padding: 6px 4px 12px;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+}
+.theme-relax .news-rail > .card{ scroll-snap-align: start; }
+.theme-relax .news-rail img{ aspect-ratio: 16 / 9; object-fit: cover; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+
+/* 10) 細部 */
+.theme-relax .stars{ color: #e8c95a; }
+.theme-relax .map iframe{ border-radius: var(--radius); }
+.theme-relax .muted{ color: var(--ink-soft); }
+
+/* 11) 横スクロール抑止 */
+html, body{ overflow-x: hidden; }
+/* ===============================
+   Zerosta Relax v4 HOTFIX (2025-08-19)
+   - Heroの白かぶりを弱める（PC/モバイル）
+   - スマホのピルナビを小型化＆横スクロール化（目立たせない）
+   =============================== */
+
+/* 1) Hero：背景オーバーレイ/カードの白を弱める（PC） */
+.relax-v4 .hero::after{
+  /* 既存の強いグラデを緩和 */
+  background:
+    linear-gradient(90deg,
+      rgba(250,247,241,.38) 0%,
+      rgba(250,247,241,.18) 40%,
+      rgba(250,247,241,0) 70%
+    ) !important;
+}
+.relax-v4 .hero-card{
+  background: rgba(255,255,255,.88) !important; /* .94 → .88 */
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.12);
+}
+
+/* 2) モバイル最適化（～480px） */
+@media (max-width: 480px){
+
+  /* Heroの白かぶりさらに弱める＋写真面積を確保 */
+  .relax-v4 .hero::after{
+    background:
+      linear-gradient(90deg,
+        rgba(250,247,241,.26) 0%,
+        rgba(250,247,241,.12) 38%,
+        rgba(250,247,241,0) 66%
+      ) !important;
+  }
+  .relax-v4 .hero-relax .hero-img{
+    height: 76vh !important; /* できるだけ全面写真に */
+    object-position: center 58%;
+    filter: saturate(1.0) brightness(.98);
+  }
+  .relax-v4 .hero-card{
+    left: 5% !important;
+    right: 5% !important;
+    max-width: 88% !important;
+    padding: 16px 18px !important;
+    background: rgba(255,255,255,.84) !important; /* さらに薄く */
+  }
+  .relax-v4 .hero-card h1{
+    font-size: clamp(22px, 7.2vw, 30px) !important;
+  }
+  .relax-v4 .hero-card .tagline{
+    font-size: 14px;
+  }
+
+  /* ピルナビ：小型・横一列・控えめ（背景/影/枠を外し気味に） */
+  .header-float .header-inner{
+    padding: 10px 8px !important;
+    gap: 8px !important;
+  }
+  .nav.nav-pill{
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    gap: 6px !important;
+
+    display: block !important;
+    white-space: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100% !important;
+  }
+  .nav.nav-pill::-webkit-scrollbar{ height: 0; } /* スクロールバー非表示 */
+
+  .nav.nav-pill a{
+    display: inline-block !important;
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,.06);
+    background: #fff;
+  }
+  .nav.nav-pill .btn{
+    padding: 6px 12px !important;
+  }
+}
+/* ========= Wave & Overlap tidy ========= */
+/* 波は常に“背景側”へ。前セクションの内容は前面へ。 */
+.relax-v4 .relax-section .container { position: relative; z-index: 2; }
+.relax-v4 .wave-sep { position: relative; z-index: 1; }
+
+/* 波の形状をなめらかに（アンチエイリアス改善） */
+.relax-v4 .wave-sep svg{
+  display:block; width:100%; height:120px;
+  shape-rendering: geometricPrecision;
+  transform: translateZ(0); /* レイヤー分離でジャギ軽減 */
+}
+
+/* Trends セクション下端で波がタグに被らないよう余白を確保 */
+#trends.section { padding-bottom: clamp(64px, 9vw, 110px); }
+#trends .trend-grid { margin-bottom: 12px; }
+#trends .trend-card { position: relative; z-index: 2; }
+#trends .trend-tags { bottom: 12px; } /* タグを1–2pxだけ持ち上げ */
+
+/* Hero 下の波が写真を削らないよう気持ちだけ浅く見せる */
+.hero-relax + .wave-sep svg { height: 110px; }
+.hero-relax + .wave-sep path { opacity: .96; }
+
+/* ========= Mobile pill nav: 分かりやすい“横スクロール”表示 ========= */
+@media (max-width: 480px){
+  /* スクロール可能にしつつ、左右にフェードを出して“続き感”を演出 */
+  .header-float .header-inner { padding: 10px 8px; }
+  .nav.nav-pill{
+    display:block; white-space:nowrap; overflow-x:auto; padding: 0 !important;
+    background: transparent !important; border: 0 !important; box-shadow: none !important;
+    -webkit-overflow-scrolling: touch;
+    /* 端フェード（スクロール示唆） */
+    mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+  }
+  .nav.nav-pill::-webkit-scrollbar{ height:0; }
+
+  .nav.nav-pill a{
+    display:inline-block; margin-right: 6px;
+    font-size: 13px; padding: 7px 11px; border-radius:999px;
+    border: 1px solid rgba(0,0,0,.06); background:#fff;
+  }
+  .nav.nav-pill .btn{ padding: 7px 12px; }
+
+  /* “スライドできます”の微アフォーダンス（右端にうっすら矢印） */
+  .nav.nav-pill::after{
+    content: "›"; position: sticky; right: 0; top: 0; bottom: 0; align-self: center;
+    display: inline-block; width: 24px; text-align: center; line-height: 28px;
+    color: rgba(0,0,0,.25); font-size: 18px; pointer-events: none;
+    margin-left: 4px;
+  }
+}
+
+/* ========= 仕上げの細部 ========= */
+/* 波の縁がカード影に勝たないよう、カード影をわずか強める */
+.relax-v4 .card.soft,
+.relax-v4 .price-card.soft,
+.relax-v4 .review.soft{
+  box-shadow: 0 10px 28px rgba(0,0,0,.10);
+}
+
+/* モバイルでヒーロー写真の面積をさらに確保（白かぶりを避ける） */
+@media (max-width:480px){
+  .relax-v4 .hero-relax .hero-img{ height: 78vh !important; }
+}
+/* =========================================================
+   Zerosta Relax : GOALD-like Minimal Skin
+   目的：見た目だけをミニマル＆エッジィに。内容は不変。
+   適用条件：<body class="... goald-skin">
+   ========================================================= */
+
+/* パレット＆トーン（モノクロ＋極薄セージを控えめに） */
+.goald-skin{
+  --g-ink: #111;           /* 本文色（濃いめ） */
+  --g-ink-weak: #5f5f5f;   /* 補助テキスト */
+  --g-bg: #fff;            /* 面は基本白 */
+  --g-bg-alt: #faf9f7;     /* ごく薄い差し色（必要最低限） */
+  --g-line: #e9e7e4;       /* 細線 */
+  --g-accent: #111;        /* ボタン/リンクの主色＝黒 */
+}
+.goald-skin body{ color:var(--g-ink); background:var(--g-bg); }
+
+/* 1) ヘッダー：白ベタ＋細線ボーダー／テキストナビ（下線ホバー） */
+.goald-skin .site-header{
+  background:#fff !important;
+  border-bottom:1px solid var(--g-line) !important;
+  backdrop-filter:none !important;
+}
+.goald-skin .header-inner{ padding: 12px 0; }
+.goald-skin .logo{ color:var(--g-ink) !important; letter-spacing:.02em; }
+
+/* pillナビ→フラットなテキストナビへ */
+.goald-skin .nav.nav-pill{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  padding:0 !important; gap:18px;
+}
+.goald-skin .nav.nav-pill a{
+  border:none !important; background:transparent !important;
+  padding:0 !important; font-size:.95rem; color:var(--g-ink);
+  position:relative;
+}
+.goald-skin .nav.nav-pill a::after{
+  content:""; position:absolute; left:0; right:0; bottom:-6px; height:1px;
+  background: currentColor; transform:scaleX(0); transform-origin:left;
+  transition: transform .25s ease;
+}
+.goald-skin .nav.nav-pill a:hover::after{ transform:scaleX(1); }
+
+/* 2) ヒーロー：白かぶりを除去／カードは枠のみ・影なし */
+.goald-skin .hero::after{ background:none !important; }
+.goald-skin .hero-relax .hero-img{
+  height: 78vh; object-position:center 58%;
+  filter: none !important; /* そのままのコントラストを見せる */
+}
+.goald-skin .hero-card{
+  background: rgba(255,255,255,.82) !important;
+  border:1px solid var(--g-line) !important;
+  box-shadow:none !important;
+  border-radius:12px !important;
+}
+.goald-skin .hero-card h1{ letter-spacing:.01em; color:var(--g-ink); }
+.goald-skin .hero-card .tagline{ color:var(--g-ink-weak); }
+
+/* 3) ボタン：黒基調／ホバーで反転 */
+.goald-skin .btn-primary{
+  background:var(--g-accent) !important; border:1px solid var(--g-accent) !important;
+  color:#fff !important; box-shadow:none !important;
+}
+.goald-skin .btn-primary:hover{ background:#fff !important; color:var(--g-accent) !important; }
+.goald-skin .btn-outline{
+  border:1px solid var(--g-ink); color:var(--g-ink); background:transparent;
+}
+.goald-skin .btn-outline:hover{ background:var(--g-ink); color:#fff; }
+
+/* 4) セクション：波/グラデを撤去し、フラット面に */
+.goald-skin .section{ background:#fff; }
+.goald-skin .section-alt{ background:var(--g-bg-alt) !important; }
+.goald-skin .wave-sep{ display:none !important; }   /* ←波を完全OFF */
+
+/* 5) カード：影→線、角丸を小さく（=硬質化） */
+.goald-skin .card,
+.goald-skin .price-card,
+.goald-skin .review,
+.goald-skin .contact .card{
+  border:1px solid var(--g-line) !important;
+  border-radius:10px !important;
+  box-shadow:none !important;
+  background:#fff;
+}
+.goald-skin .card img,
+.goald-skin .trend-card img,
+.goald-skin .gallery-grid img{
+  border-radius:8px !important;
+  box-shadow:none !important;
+}
+
+/* 6) タイポ：見出しは太字/本文は整然。余白はややタイトに */
+.goald-skin .section-title{ letter-spacing:.02em; color:var(--g-ink); }
+.goald-skin .section-lead{ color:var(--g-ink-weak); }
+
+/* 7) Trends：タグの“ふわ感”をやめ、アウトラインの小粒チップに */
+.goald-skin .trend-tags{
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%) !important; /* グラデOFF */
+  bottom: 10px;
+}
+.goald-skin .trend-tags span{
+  color:#333; background:#fff;
+  border:1px solid var(--g-line);
+  border-radius:6px; padding:6px 8px; font-size:12px;
+}
+
+/* 8) News横スライド：カード影OFF・枠線ON、サムネ比率維持 */
+.goald-skin .news-rail > .card{
+  border:1px solid var(--g-line) !important; box-shadow:none !important;
+}
+
+/* 9) ギャラリー等：余白を均し、要素の“段差”をなくす */
+.goald-skin .feature-grid,
+.goald-skin .price-grid,
+.goald-skin .stylist-grid,
+.goald-skin .trend-grid,
+.goald-skin .gallery-grid,
+.goald-skin .review-grid{ gap: 18px !important; }
+
+/* 10) モバイル最適化：ナビは横スクロールを明示（フェード＋矢印） */
+@media (max-width: 480px){
+  .goald-skin .nav.nav-pill{
+    display:block; white-space:nowrap; overflow-x:auto;
+    mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+  }
+  .goald-skin .nav.nav-pill::-webkit-scrollbar{ height:0; }
+  .goald-skin .nav.nav-pill::after{
+    content:"›"; position:sticky; right:0; top:0; bottom:0;
+    display:inline-block; width:24px; text-align:center; color:rgba(0,0,0,.25);
+    pointer-events:none; margin-left:6px;
+  }
+  .goald-skin .nav.nav-pill a{ font-size:13px; }
+  .goald-skin .hero-relax .hero-img{ height: 76vh; }
+}

@@ -1,0 +1,445 @@
+/* ---------------------------------
+  基本リセット
+--------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* リンク */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+/* 画像 */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* コンテナ */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.4em;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary {
+  background: #C49A9A;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #b17f7f;
+}
+
+.btn-outline {
+  border: 2px solid #C49A9A;
+  color: #C49A9A;
+  background: transparent;
+}
+.btn-outline:hover {
+  background: #C49A9A;
+  color: #fff;
+}
+
+.btn-small {
+  padding: 0.4em 1em;
+  font-size: 0.85rem;
+}
+
+/* ---------------------------------
+  ヘッダー
+--------------------------------- */
+.site-header {
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 0;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #C49A9A;
+}
+
+.nav a {
+  margin-left: 1.2em;
+  font-size: 0.95rem;
+}
+
+/* ---------------------------------
+  ヒーロー
+--------------------------------- */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center 32%;
+  filter: brightness(0.75);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+}
+
+.tagline {
+  margin: 0.5em 0 1em;
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------
+  セクション共通
+--------------------------------- */
+.section {
+  padding: 4em 0;
+}
+
+.section-alt {
+  background: #faf7f7;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.section-title.serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.section-lead {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2em;
+  font-size: 1rem;
+  color: #555;
+}
+
+.muted {
+  color: #777;
+}
+
+/* ---------------------------------
+  カード・グリッド
+--------------------------------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.card h3 {
+  margin: 0.8em 0 0.4em;
+  font-size: 1.1rem;
+  color: #C49A9A;
+}
+
+/* ---------------------------------
+  料金表
+--------------------------------- */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2em;
+}
+
+.price-card {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.price-card h3 {
+  color: #C49A9A;
+  margin-bottom: 0.5em;
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+
+.price-card li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4em;
+}
+
+.price-card strong {
+  color: #333;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.cta-line {
+  text-align: center;
+  margin-top: 2em;
+}
+
+/* ---------------------------------
+  Stylists
+--------------------------------- */
+.stylist-grid {
+  display: grid;
+  gap: 2em;
+}
+
+.stylist {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.stylist img {
+  border-radius: 8px;
+}
+
+.stylist--team {
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------------------------------
+  ギャラリー
+--------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+}
+
+.gallery-grid img {
+  border-radius: 6px;
+}
+
+/* ---------------------------------
+  レビュー
+--------------------------------- */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5em;
+}
+
+.review {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.stars {
+  color: #FFD700;
+  margin-bottom: 0.5em;
+}
+
+/* ---------------------------------
+  アクセス
+--------------------------------- */
+.access-grid {
+  display: grid;
+  gap: 2em;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 6px;
+}
+
+.access-info p {
+  margin-bottom: 0.3em;
+}
+
+.access-photo {
+  margin-top: 1em;
+  border-radius: 6px;
+}
+
+/* ---------------------------------
+  お問い合わせ
+--------------------------------- */
+.contact .card {
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tel {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0.3em 0 1em;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------------------------------
+  フッター
+--------------------------------- */
+.site-footer {
+  background: #f0eded;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ---------------------------------
+  レスポンシブ
+--------------------------------- */
+@media (min-width: 768px) {
+  .stylist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .access-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* ===== Zerosta Chic: News & Trends add-on (2025-08-16) ===== */
+
+/* NEWSスライダー */
+#news .section-title { margin-bottom: 0.8em; }
+.zc-slider{ position:relative; }
+.zc-scroller{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns: clamp(280px, 32vw, 340px);
+  gap:18px;
+  overflow-x:auto;
+  padding:4px 0 10px;
+  scroll-snap-type:x mandatory;
+  scroll-padding:8px;
+  -webkit-overflow-scrolling: touch;
+}
+.zc-scroller::-webkit-scrollbar{ height:8px; }
+.zc-scroller::-webkit-scrollbar-thumb{ background:#ddd; border-radius:999px; }
+.zc-scroller > *{ scroll-snap-align:start; }
+
+.zc-tile{
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+.zc-media{ aspect-ratio: 16 / 9; background:#111; }
+.zc-media img{ width:100%; height:100%; object-fit:cover; }
+.zc-body{ padding:12px 14px 16px; }
+.zc-kv{ font-weight:700; font-size:1.05rem; margin-bottom:6px; }
+.zc-meta{ color:#777; font-size:.85rem; }
+
+.zc-nav{ position:absolute; inset:0; pointer-events:none; }
+.zc-btn{
+  pointer-events:auto;
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:40px; height:40px; border:none; border-radius:999px;
+  background:#fff; box-shadow:0 8px 28px rgba(0,0,0,.08); cursor:pointer;
+  display:grid; place-items:center; font-weight:700;
+}
+.zc-btn.prev{ left:-6px; }
+.zc-btn.next{ right:-6px; }
+.zc-scroller.is-drag{ cursor:grabbing; }
+
+/* Trends（均一サイズ） */
+#trends .section-title{ margin-bottom:.5em; }
+.zc-grid{
+  --ratio: .8; /* 4/5 = 0.8 */
+  display:grid; gap:16px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1000px){ .zc-grid{ grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 680px){ .zc-grid{ grid-template-columns: repeat(2, 1fr); } }
+
+.zc-item{ display:flex; flex-direction:column; gap:.5rem; }
+.zc-thumb{
+  position:relative; width:100%;
+  aspect-ratio: var(--ratio);
+  border-radius:14px; overflow:hidden;
+  background:#f5f5f5; border:1px solid #eee;
+}
+.zc-thumb img{ width:100%; height:100%; object-fit:cover; object-position:center; }
+.zc-cap{ font-size:.92rem; color:#333; text-align:left; }
+
+/* data-ratioで切替（例: 1/1 や 3/4 をHTMLで指定可） */
+.zc-grid[data-ratio="1/1"]{ --ratio: 1; }
+.zc-grid[data-ratio="3/4"]{ --ratio: .75; }
+.zc-grid[data-ratio="4/5"]{ --ratio: .8; }
+
+/* セクション背景との統一感（既存デザインに馴染ませる） */
+#news.section{ background: #fff; }        /* 既存と同トーン */
+#trends.section-alt{ background:#faf7f7; } /* そのまま */
+
